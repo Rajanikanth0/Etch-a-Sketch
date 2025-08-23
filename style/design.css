@@ -1,0 +1,27 @@
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+
+  width: 400px; height: 400px;
+}
+
+.square {
+  width: 100px; height: 100px;
+  border: thin solid lightgray;
+
+  flex: 0 0 24%;
+}
