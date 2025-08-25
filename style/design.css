@@ -14,14 +14,12 @@ body {
 #container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1%;
+  gap: 0.5%;
 
-  width: 400px; height: 400px;
+  width: 640px; height: 640px;
 }
 
 .square {
-  width: 100px; height: 100px;
+  width: 5.75%; height: 5.75%;
   border: thin solid lightgray;
-
-  flex: 0 0 24%;
 }

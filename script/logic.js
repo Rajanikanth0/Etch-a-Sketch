@@ -12,4 +12,6 @@ function getDivs(count) {
 }
 
 const container = document.querySelector("#container");
-container.appendChild( getDivs(16) );
+
+const grid_rowSize = 16;
+container.appendChild( getDivs(grid_rowSize * grid_rowSize) );
