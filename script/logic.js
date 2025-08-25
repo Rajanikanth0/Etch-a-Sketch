@@ -25,11 +25,8 @@ container.appendChild( cells );
 // cell hover section
 function hoverEffect(e) {
   function getRandomHex() {
-    // get random rgb values till 256
-    let [r, g, b] = [Math.random() * 257, Math.random() * 257, Math.random() * 257];
-
-    const raw_hex = Math.floor( (1 << 24) + (r << 16) + (g << 8) + b );
-    const hex = "#" + raw_hex.toString(16).slice(1);
+    const raw_hex = Math.floor(Math.random() * 0xffffff)
+    const hex = "#" + raw_hex.toString(16).padStart(6, '0');
 
     return hex;
   }
