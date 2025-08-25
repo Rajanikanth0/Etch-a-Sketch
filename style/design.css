@@ -15,10 +15,13 @@ body {
   width: 640px; height: 640px;
 }
 
-.square {
-  width: 5.75%; height: 5.75%;
+.cell {
   border: thin solid lightgray;
 }
-.square_hover {
+.cell_hover {
   background-color: royalblue;
+}
+
+#grid_sizeButton {
+  margin-bottom: 10px;
 }
