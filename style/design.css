@@ -18,9 +18,6 @@ body {
 .cell {
   border: thin solid lightgray;
 }
-.cell_hover {
-  background-color: royalblue;
-}
 
 #grid_sizeButton {
   margin-bottom: 10px;

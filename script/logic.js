@@ -24,8 +24,18 @@ container.appendChild( cells );
 
 // cell hover section
 function hoverEffect(e) {
+  function getRandomHex() {
+    // get random rgb values till 256
+    let [r, g, b] = [Math.random() * 257, Math.random() * 257, Math.random() * 257];
+
+    const raw_hex = Math.floor( (1 << 24) + (r << 16) + (g << 8) + b );
+    const hex = "#" + raw_hex.toString(16).slice(1);
+
+    return hex;
+  }
+
   if (e.target.classList[0] == 'cell') {
-    e.target.classList.add("cell_hover");
+    e.target.style.backgroundColor = getRandomHex();
   }
 }
 container.addEventListener("mouseover", hoverEffect);
