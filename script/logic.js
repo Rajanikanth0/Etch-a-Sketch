@@ -15,3 +15,10 @@ const container = document.querySelector("#container");
 
 const grid_rowSize = 16;
 container.appendChild( getDivs(grid_rowSize * grid_rowSize) );
+
+function hoverEffect(e) {
+  if (e.target.classList[0] == 'square') {
+    e.target.classList.add("square_hover");
+  }
+}
+container.addEventListener("mouseover", hoverEffect);

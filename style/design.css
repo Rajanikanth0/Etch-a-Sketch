@@ -23,3 +23,6 @@ body {
   width: 5.75%; height: 5.75%;
   border: thin solid lightgray;
 }
+.square_hover {
+  background-color: royalblue;
+}
