@@ -31,8 +31,27 @@ function hoverEffect(e) {
     return hex;
   }
 
-  if (e.target.classList[0] == 'cell') {
-    e.target.style.backgroundColor = getRandomHex();
+  const target = e.target;
+
+  if (target.classList[0] == 'cell') {
+    const target_bgColor = target.style.backgroundColor;
+
+    // set initial color
+    if (!target_bgColor) {
+      target.style.backgroundColor = getRandomHex();
+      target.style.opacity = "0.1";
+      return;
+    }
+
+    // increase opacity
+    const next_opacity = (+target.style.opacity + 0.1) % 1;
+    target.style.opacity = next_opacity.toFixed(1);
+
+    // reset box style if opacity is 0
+    if (!+target.style.opacity) {
+      target.style.opacity = 1;
+      target.style.backgroundColor = "";
+    }
   }
 }
 container.addEventListener("mouseover", hoverEffect);
